@@ -10,10 +10,9 @@ import { Place } from '../place.model';
 export class OffersPage implements OnInit {
   offers: Place[];
 
-  constructor(private placesService: PlacesService) { }
+  constructor(private placeService: PlacesService) {}
 
   ngOnInit() {
-    this.offers = this.placesService.places;
+    this.offers = this.placeService.places;
   }
-
 }
