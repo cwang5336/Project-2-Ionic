@@ -1,11 +1,16 @@
 <ion-header>
-  <ion-toolbar>
-    <ion-title>Authenticate</ion-title>
-  </ion-toolbar>
+    <ion-img style="height:100px" src="src/assets/icon/HotelLogo.png"></ion-img>
 </ion-header>
 
 <ion-content class="ion-padding">
+  <div class="ion-text-center">
+    <h1>Login</h1>
+  </div>
   <ion-list>
+    <ion-item>
+      <ion-label position="floating">Username</ion-label>
+      <ion-input></ion-input>
+    </ion-item>
     <ion-item>
       <ion-label position="floating">E-Mail</ion-label>
       <ion-input></ion-input>
@@ -15,5 +20,11 @@
       <ion-input></ion-input>
     </ion-item>
   </ion-list>
-  <ion-button color="primary" (click)="onLogin()"> Login </ion-button>
+  <ion-row style="vertical-align: middle;">
+    <ion-checkbox style="vertical-align: middle;"checked="true">Save login information</ion-checkbox>
+    <p>Save Information</p>
+  </ion-row>
+  <div class="ionic-text-center" >
+    <ion-button color="primary" (click)="onLogin()"> Login </ion-button>
+  </div>
 </ion-content>
