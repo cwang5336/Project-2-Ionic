@@ -7,7 +7,7 @@ import {Routes, RouterModule} from '@angular/router';
 
 import { EditOfferPage } from './edit-offer.page';
 
-const routes = [
+const routes: Routes = [
   {
     path: '',
     component: EditOfferPage
