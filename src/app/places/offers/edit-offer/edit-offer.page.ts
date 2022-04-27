@@ -2,19 +2,24 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { NavController } from '@ionic/angular';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 import { PlacesService } from '../../places.service';
 import { Place } from '../../place.model';
 
 @Component({
   selector: 'app-edit-offer',
   templateUrl: './edit-offer.page.html',
-  styleUrls: ['./edit-offer.page.scss'],
+  styleUrls: ['./edit-offer.page.scss']
 })
 export class EditOfferPage implements OnInit {
   place: Place;
   form: FormGroup;
 
-  constructor(private route: ActivatedRoute, private placesService: PlacesService, private navCtrl: NavController) { }
+  constructor(
+    private route: ActivatedRoute,
+    private placesService: PlacesService,
+    private navCtrl: NavController
+  ) {}
 
   ngOnInit() {
     this.route.paramMap.subscribe(paramMap => {
@@ -34,7 +39,6 @@ export class EditOfferPage implements OnInit {
         })
       });
     });
-
   }
 
   onUpdateOffer() {

@@ -9,3 +9,4 @@ export class Place {
     public availableTo: Date
   ) {}
 }
+
